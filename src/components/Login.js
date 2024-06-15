@@ -3,15 +3,14 @@ import Header from './Header'
 import {checkValidData} from '../utils/validate'
 import {createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth"
 import {auth} from '../utils/firebase.js'
-import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux'
 import { addUser } from '../utils/userSlice.js'
+import { BG_IMG, USER_AVATAR } from '../utils/constants.js'
 
 const Login = () => {
 
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
-  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const name = useRef(null);
@@ -30,12 +29,11 @@ const Login = () => {
         // Signed up 
         const user = userCredential.user;
         updateProfile(user, {
-          displayName: name.current.value, photoURL: "https://example.com/jane-q-user/profile.jpg"
+          displayName: name.current.value, photoURL: USER_AVATAR
         }).then(() => {
           // Profile updated!
           const {uid, email, displayName, photoURL} = auth.currentUser;
           dispatch(addUser({uid: uid, email: email, displayName: displayName, photoURL: photoURL}));
-          navigate('/browse');
         }).catch((error) => {
           // An error occurred
           setErrorMessage(error.message);
@@ -55,7 +53,7 @@ const Login = () => {
       .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
-        navigate('/browse')
+        console.log(user);
         // ...
       })
       .catch((error) => {
@@ -74,7 +72,7 @@ const Login = () => {
     <div>
       <Header/>
       <div className='absolute'>
-        <img src='https://assets.nflxext.com/ffe/siteui/vlv3/cacfadb7-c017-4318-85e4-7f46da1cae88/e43aa8b1-ea06-46a5-abe3-df13243e718d/IN-en-20240603-popsignuptwoweeks-perspective_alpha_website_large.jpg'
+        <img src={BG_IMG}
           alt='background-image'>
         </img>
       </div>

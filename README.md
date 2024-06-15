@@ -1,19 +1,24 @@
-1. Create React App
-2. Configured TailwindCSS
-3. Header component
-4. Routing of App
-5. Login form
-6. Sign Up form
-7. Form Validation
-8. useRef Hook
-9. Firebase SetUp
-10. Deploying our App to Production
-11. Create SignUp User Account
-12. Implement Sign In user API
-13. Created Redux Store with userSlice
-14. Implemented Sign Out
-15. Update Profile
-16. Fetch from TMDB Movies Database
+- Create React App
+- Configured TailwindCSS
+- Header component
+- Routing of App
+- Login form
+- Sign Up form
+- Form Validation
+- useRef Hook
+- Firebase SetUp
+- Deploying our App to Production
+- Create SignUp User Account
+- Implement Sign In user API
+- Created Redux Store with userSlice
+- Implemented Sign Out
+- Update Profile
+- BugFix : Sign Up user displayName and profile picture update
+- BugFix : If the user is not logged in Redirect /browse to Login Page
+- Unsubscribe to the onAuthStateChanged callback
+- Add hardcoded values to the constant file
+
+Fetch from TMDB (The Movies Database)
 
 # Getting Started with Create React App
 
