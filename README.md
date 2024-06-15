@@ -17,8 +17,9 @@
 - BugFix : If the user is not logged in Redirect /browse to Login Page
 - Unsubscribe to the onAuthStateChanged callback
 - Add hardcoded values to the constant file
-
-Fetch from TMDB (The Movies Database)
+- Register TMDB API & create an App & get access Token
+- Get data fom TMDB Now Playing movies list API
+  Fetch from TMDB (The Movies Database)
 
 # Getting Started with Create React App
 
