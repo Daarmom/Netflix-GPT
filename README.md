@@ -17,9 +17,22 @@
 - BugFix : If the user is not logged in Redirect /browse to Login Page
 - Unsubscribe to the onAuthStateChanged callback
 - Add hardcoded values to the constant file
-- Register TMDB API & create an App & get access Token
+- Register TMDB (The Movies Database) API & create an App & get access Token
 - Get data fom TMDB Now Playing movies list API
-  Fetch from TMDB (The Movies Database)
+- Custom Hook for Now Playing Videos
+- Create movieSlice
+- Update Store with movie Data
+- Planning for Main container and Secondary container
+- Fetch data for Trailer video
+- Update store with Trailer video data
+- Embed the youtube video trailer and make it autoplay and mute
+- Tailwind classes to make it look-a-like of netflix website.
+- Build Secondary component
+- Build movie List
+- Build movie card
+- TMDB Image CDN URL
+- Made the Browse page with Tailwind css
+- Created custom hooks - usePopularMovies, useTopRatedMovies, useUpcomingMovies
 
 # Getting Started with Create React App
 
