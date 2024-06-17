@@ -33,6 +33,11 @@
 - TMDB Image CDN URL
 - Made the Browse page with Tailwind css
 - Created custom hooks - usePopularMovies, useTopRatedMovies, useUpcomingMovies
+- Create GPT search Page
+- Create GPT search Bar
+- Multi-lingual feature
+- Integrate GPT APIs
+- Securing Secret API Keys
 
 # Getting Started with Create React App
 
