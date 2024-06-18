@@ -8,6 +8,7 @@ const useMovieTrailer = (movieId) => {
 
     const dispatch = useDispatch();
     const trailerVideo = useSelector((store) => store.movies.trailerVideo);
+    
     // const [trailerId, setTrailerId] = useState(null);
     console.log(movieId);
     const getMovieVideos = async () =>{
@@ -30,7 +31,7 @@ const useMovieTrailer = (movieId) => {
     }
 
     useEffect(()=>{
-        getMovieVideos();
+        !trailerVideo && getMovieVideos();
     }, []);
 }
 

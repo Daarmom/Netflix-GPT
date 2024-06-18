@@ -38,6 +38,7 @@
 - Multi-lingual feature
 - Integrate GPT APIs
 - Securing Secret API Keys
+- Adding memoization
 
 # Getting Started with Create React App
 
