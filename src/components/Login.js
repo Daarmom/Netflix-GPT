@@ -1,11 +1,11 @@
 import React, { useRef, useState } from 'react'
-import Header from './Header'
-import {checkValidData} from '../utils/validate'
 import {createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth"
-import {auth} from '../utils/firebase.js'
 import { useDispatch } from 'react-redux'
-import { addUser } from '../utils/userSlice.js'
-import { BG_IMG, USER_AVATAR } from '../utils/constants.js'
+import Header from './Header'
+import {auth} from '../utils/firebase.js'
+import {checkValidData} from '../utils/validate'
+import { addUser } from '../utils/store/userSlice.js'
+import { BG_IMG, USER_AVATAR } from '../utils/constants/constants.js'
 
 const Login = () => {
 
@@ -72,7 +72,7 @@ const Login = () => {
     <div>
       <Header/>
       <div className='absolute'>
-        <img src={BG_IMG}
+        <img className='h-screen w-screen object-cover' src={BG_IMG}
           alt='background-image'>
         </img>
       </div>

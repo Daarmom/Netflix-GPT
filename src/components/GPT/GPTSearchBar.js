@@ -1,9 +1,9 @@
 import React, { useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import lang from '../utils/languageConstants';
-import openai from '../utils/openai';
-import { addGptMovieResult } from '../utils/gptSlice';
-import { API_OPTIONS } from '../utils/constants';
+import lang from '../../utils/constants/languageConstants';
+import openai from '../../utils/openai';
+import { addGptMovieResult } from '../../utils/store/gptSlice';
+import { API_OPTIONS } from '../../utils/constants/constants.js';
 
 
 const GPTSearchBar = () => {
@@ -62,8 +62,8 @@ const GPTSearchBar = () => {
   }
   
   return (
-    <div className='p-[10%] flex justify-center'>
-        <form className='w-1/2 bg-black grid grid-cols-12'
+    <div className='pt-[30%] md:pt-[10%]  flex justify-center'>
+        <form className=' w-full md:w-1/2 bg-black grid grid-cols-12'
               onSubmit={e=>e.preventDefault()}
         >
             <input 

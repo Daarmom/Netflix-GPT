@@ -1,8 +1,8 @@
 //Hook is just a function
 
 import { useDispatch, useSelector } from "react-redux";
-import { API_OPTIONS } from "../utils/constants";
-import { addNowPlayingMovies } from "../utils/moviesSlice";
+import { API_OPTIONS } from "../utils/constants/constants.js";
+import { addNowPlayingMovies } from "../utils/store/moviesSlice";
 import { useEffect } from "react";
 
 
@@ -17,7 +17,7 @@ const useNowPlayingMovies = () =>{
       API_OPTIONS
     );
     const json = await data.json();
-    console.log(json.results);
+    // console.log(json.results);
     dispatch(addNowPlayingMovies(json.results))
   };
   //call getNowPlayingMovies inside useEffect(), so that I can call it once(whenever the component is rendered)

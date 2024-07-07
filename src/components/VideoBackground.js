@@ -1,22 +1,25 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import useMovieTrailer from '../hooks/useMovieTrailer';
 import { useSelector } from 'react-redux';
+import YouTubePlayer from './YoutubePlayer';
 
 const VideoBackground = ({movieId}) => {
-    
+    const [isMuted, setIsMuted] = useState(true);
     const trailerVideo = useSelector(store => store.movies?.trailerVideo);
+    const trailerVideoKey = trailerVideo?.key;
     
     useMovieTrailer(movieId);
   return (
     <div className=" w-screen">
-        <iframe 
+      <YouTubePlayer videoKey={trailerVideoKey} />
+        {/* <iframe 
         className='w-screen aspect-video' 
         src={"https://www.youtube.com/embed/"+trailerVideo?.key+"?&autoplay=1&mute=1"} 
         title="YouTube video player" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
         referrerPolicy="strict-origin-when-cross-origin" 
         >
-        </iframe>
+        </iframe> */}
     </div>
   )
 }

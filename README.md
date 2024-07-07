@@ -37,8 +37,9 @@
 - Create GPT search Bar
 - Multi-lingual feature
 - Integrate GPT APIs
-- Securing Secret API Keys
+- Securing Secret API Keys (.env file)
 - Adding memoization
+- Web responsive
 
 # Getting Started with Create React App
 

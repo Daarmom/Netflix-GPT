@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from './Header'
-import GPTSearch from './GPTSearch'
+import GPTSearch from './GPT/GPTSearch'
 import SecondaryContainer from './SecondaryContainer';
 import MainContainer from './MainContainer';
 import useNowPlayingMovies from '../hooks/useNowPlayingMovies';

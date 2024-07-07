@@ -1,26 +1,23 @@
 import React from 'react'
 import MovieList from './MovieList';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 const SecondaryContainer = () => {
   const movies = useSelector((store) => store.movies);
-  console.log(movies);
-  return (
-    <div className='bg-black'>
-      <div className='relative -mt-20 z-20'>
-        <MovieList title={"Now Playing"} movies={movies.nowPlayingMovies} />
-        <MovieList title={"Popular"} movies={movies.popularMovies} />
-        <MovieList title={"Top-Rated"} movies={movies.topRatedMovies} />
-        <MovieList title={"Upcomings"} movies={movies.upcomingMovies} />
-        {/* <MovieList title={"Horror"} movies={movies.horrorMovies} /> */}
-      </div>
+  const navigate = useNavigate();
   
-      {/* MovieList - popular
-          moviecard * n
-          movielist - now playing
-          movielist - ttrending
-          movielist - horror
-      */}
+  const onMovieSelect = (movieId) => {
+    navigate(`/movie/${movieId}`);
+  };
+  return (
+    <div className='bg-black w-screen h-full'>
+      <div className='mt-0 md:-mt-20 relative z-20 w-full'>
+        <MovieList title={"Now Playing"} movies={movies.nowPlayingMovies} onMovieSelect={onMovieSelect} />
+        <MovieList title={"Popular"} movies={movies.popularMovies} onMovieSelect={onMovieSelect}/>
+        <MovieList title={"Top-Rated"} movies={movies.topRatedMovies} onMovieSelect={onMovieSelect}/>
+        <MovieList title={"Upcomings"} movies={movies.upcomingMovies} onMovieSelect={onMovieSelect}/>
+      </div> 
     </div>
   )
 }

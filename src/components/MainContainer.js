@@ -11,10 +11,11 @@ const MainContainer = () => {
     console.log(mainMovie);
 
     const {original_title, overview, id} = mainMovie;
-    console.log(id);
+    const movieDetail = JSON.stringify(overview);
+    
     return (
-        <div>
-            <VideoTitle title={original_title} overview={overview}/>
+        <div className='pt-0 md:pt-0'>
+            <VideoTitle title={original_title} overview={movieDetail}/>
             <VideoBackground movieId={id}/>
             
         </div>
