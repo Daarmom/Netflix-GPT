@@ -40,7 +40,7 @@ const YouTubePlayer = ({ videoKey }) => {
   return (
     <div className='w-screen aspect-video'>
       <YouTube className="w-full h-full" videoId={videoKey} opts={opts} onReady={onReady} />
-      <button className='absolute bottom-4 right-4 text-black text-lg font-bold mt-0' onClick={toggleMute} id="mute-toggle">
+      <button className='absolute bottom-4 right-4 text-white text-lg font-bold mt-0' onClick={toggleMute} id="mute-toggle">
         {/* <i class="fas fa-volume-mute"></i> */}
         Mute/Unmute
         
